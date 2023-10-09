@@ -7,7 +7,7 @@ function AccountOperations() {
   const [withdrawalAmount, setWithdrawalAmount] = useState("");
 
   const [loanAmount, setLoanAmount] = useState("");
-  const [loanPurpose, setLoanPupose] = useState("");
+  const [loanPurpose, setLoanPurpose] = useState("");
   const [currency, setCurrency] = useState("USD");
 
   const dispatch = useDispatch();
@@ -41,7 +41,7 @@ function AccountOperations() {
     dispatch(requestLoan(loanAmount, loanPurpose));
 
     setLoanAmount("");
-    setLoanPupose("");
+    setLoanPurpose("");
   }
 
   function handlePayLoan() {
@@ -94,7 +94,7 @@ function AccountOperations() {
           </button>
         </div>
 
-        <div className="py-2 px-1 space-x-4">
+        <div className="px-1 space-x-4">
           <label>Request Loan :</label>
           <input
             className="border-2 border-black"
@@ -107,7 +107,7 @@ function AccountOperations() {
             className="border-2 border-black"
             placeholder="Loan Purpose"
             value={loanPurpose}
-            onChange={(e) => setLoanPupose(e.target.value)}
+            onChange={(e) => setLoanPurpose(e.target.value)}
           />
           <button
             className="border-2 border-black mt-4 px-4"
@@ -118,11 +118,16 @@ function AccountOperations() {
         </div>
 
         {currentLoan > 0 && (
-          <div>
+          <div className="py-4 px-1">
             <span>
-              Pay back ${currentLoan}({currentLoanPurpose})
+              Pay back ${currentLoan}{" "}
+              <span className="italic">({currentLoanPurpose})</span>
             </span>
-            <button className="border-2 border-black" onClick={handlePayLoan}>
+
+            <button
+              className="border-2 border-black ml-3 px-4"
+              onClick={handlePayLoan}
+            >
               Pay loan
             </button>
           </div>
