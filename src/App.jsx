@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
 import CreateCustomer from "./features/customers/createCustomer";
 import Customer from "./features/customers/Customer";
+import AccountOperations from "./features/accounts/AccountOperations";
+import BalanceDisplay from "./features/accounts/BalanceDisplay";
 
 function App() {
   const fullName = useSelector((state) => state.customer.fullName);
@@ -9,8 +11,15 @@ function App() {
       <div className="flex justify-center items-center py-8 ">
         <h1 className="text-4xl font-bold"> Phil-Bank 🏦</h1>
       </div>
-      <CreateCustomer />
-      <Customer />
+      {fullName === "" ? (
+        <CreateCustomer />
+      ) : (
+        <div className="text-lg flex justify-center items-center flex-col bg-[#f1ebeb] mx-20">
+          <Customer />
+          <AccountOperations />
+          <BalanceDisplay />
+        </div>
+      )}
     </div>
   );
 }

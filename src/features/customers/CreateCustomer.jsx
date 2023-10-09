@@ -10,7 +10,7 @@ function Customer() {
   const dispatch = useDispatch();
 
   function handleClick() {
-    if (!fullName || !nationalId || !createdAt) return;
+    if (!fullName || !nationalId || createdAt) return;
     dispatch(createCustomer(fullName, nationalId, createdAt));
   }
 
