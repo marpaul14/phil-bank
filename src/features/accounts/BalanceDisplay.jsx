@@ -8,7 +8,14 @@ function formatCurrency(value) {
 }
 
 function BalanceDisplay({ balance }) {
-  return <div>{formatCurrency(balance)}</div>;
+  return (
+    <div className="flex justify-center items-center space-x-4">
+      <span>Account Balance:</span>
+      <div className="py-1 px-3 my-2 border-black border-2">
+        {formatCurrency(balance)}
+      </div>
+    </div>
+  );
 }
 
 function mapStateToProps(state) {

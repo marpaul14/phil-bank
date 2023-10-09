@@ -14,7 +14,7 @@ function App() {
       {fullName === "" ? (
         <CreateCustomer />
       ) : (
-        <div className="text-lg flex justify-center items-center flex-col bg-[#f1ebeb] mx-20">
+        <div className="text-lg flex justify-center items-center flex-col bg-[#f1ebeb] mx-20 border-4 border-black">
           <Customer />
           <AccountOperations />
           <BalanceDisplay />
