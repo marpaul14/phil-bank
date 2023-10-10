@@ -47,9 +47,9 @@ function Customer() {
       <span className="flex justify-center items-center py-5">
         <button
           onClick={handleClick}
-          className="border-2 px-2 py-1 rounded-lg cursor-default delay-200 bg-zinc-200/50 hover:bg-zinc-400 focus:outline-[#888585]"
+          className="border-2 px-5 py- rounded-lg cursor-default delay-200 bg-zinc-200/50 hover:bg-zinc-400 focus:outline-[#888585]"
         >
-          Proceed...
+          Submit
         </button>
       </span>
     </div>

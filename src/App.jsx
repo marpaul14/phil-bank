@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux";
-import CreateCustomer from "./features/customers/createCustomer";
+
 import Customer from "./features/customers/Customer";
 import AccountOperations from "./features/accounts/AccountOperations";
 import BalanceDisplay from "./features/accounts/BalanceDisplay";
+import CreateCustomer from "./features/customers/CreateCustomer";
 
 function App() {
   const fullName = useSelector((state) => state.customer.fullName);
