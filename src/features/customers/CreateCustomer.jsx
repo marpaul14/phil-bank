@@ -15,7 +15,7 @@ function Customer() {
   }
 
   return (
-    <div className="bg-[#f1ebeb] mx-20">
+    <div className="bg-white h-[55%] w-[70%] flex justify-center items-center flex-col rounded-3xl shadow-lg shadow-blue-300/70">
       <h2 className="text-xl font-semibold flex justify-center items-center py-5">
         Create New Customer
       </h2>
@@ -24,7 +24,7 @@ function Customer() {
           <div>
             <label className="px-5 font-semibold">Customer Full Name :</label>
             <input
-              className="border-2 border-black"
+              className="bg-zinc-200 w-[80%] rounded-xl text-center p-[0.5em]"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
             />

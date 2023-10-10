@@ -7,8 +7,8 @@ import BalanceDisplay from "./features/accounts/BalanceDisplay";
 function App() {
   const fullName = useSelector((state) => state.customer.fullName);
   return (
-    <div className="bg-green-400 w-full h-screen pt-20">
-      <div className="flex justify-center items-center py-8 ">
+    <div className="bg-[#D3D3D3] w-full h-screen flex justify-center items-center text-base">
+      <div className="absolute top-60">
         <h1 className="text-4xl font-bold"> Phil-Bank 🏦</h1>
       </div>
       {fullName === "" ? (
