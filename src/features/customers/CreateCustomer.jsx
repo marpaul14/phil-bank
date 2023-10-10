@@ -15,39 +15,43 @@ function Customer() {
   }
 
   return (
-    <div className="bg-white h-[55%] w-[70%] flex justify-center items-center flex-col rounded-3xl shadow-lg shadow-blue-300/70">
+    <div className="bg-white h-[55%] w-[70%] flex flex-col justify-center items-center rounded-3xl shadow-lg shadow-blue-300/70">
+      <div className="absolute top-60 text-center">
+        <h1 className="text-4xl font-bold border-b border-black hover:text-[#888585] cursor-default hover:border-[#888585] duration-300">
+          Phil-Bank
+        </h1>
+      </div>
       <h2 className="text-xl font-semibold flex justify-center items-center py-5">
         Create New Customer
       </h2>
-      <div>
-        <div className="flex justify-center items-center space-y-3 flex-col mx-auto ">
-          <div>
-            <label className="px-5 font-semibold">Customer Full Name :</label>
-            <input
-              className="bg-zinc-200 w-[80%] rounded-xl text-center p-[0.5em]"
-              value={fullName}
-              onChange={(e) => setFullName(e.target.value)}
-            />
-          </div>
 
-          <div>
-            <label className="pl-6 font-semibold">National ID :</label>
-            <input
-              className="border-2 border-black ml-[5rem]"
-              value={nationalId}
-              onChange={(e) => setNationalId(e.target.value)}
-            />
-          </div>
+      <div className="relative grid place-content-around h-40">
+        <div>
+          <label className="px-5 font-semibold">Customer Full Name :</label>
+          <input
+            className="bg-zinc-200 w-[90%] rounded-lg text-center p-[0.5em] border-none focus:outline-[#888585]"
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
+          />
         </div>
-        <span className="flex justify-center items-center py-5">
-          <button
-            onClick={handleClick}
-            className="border-2 border-black py- px-2"
-          >
-            Proceed...
-          </button>
-        </span>
+
+        <div>
+          <label className="px-5 font-semibold">National ID :</label>
+          <input
+            className="bg-zinc-200 w-[90%] rounded-lg text-center p-[0.5em] border-none focus:outline-[#888585]"
+            value={nationalId}
+            onChange={(e) => setNationalId(e.target.value)}
+          />
+        </div>
       </div>
+      <span className="flex justify-center items-center py-5">
+        <button
+          onClick={handleClick}
+          className="border-2 px-2 py-1 rounded-lg cursor-default delay-200 bg-zinc-200/50 hover:bg-zinc-400 focus:outline-[#888585]"
+        >
+          Proceed...
+        </button>
+      </span>
     </div>
   );
 }

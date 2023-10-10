@@ -49,19 +49,19 @@ function AccountOperations() {
   }
 
   return (
-    <div>
+    <div className="bg-white">
       <h2 className="py-3 text-xl px-2">Account Operations</h2>
-      <div>
-        <div className="py-3 px-5 space-x-4">
-          <label>Deposit :</label>
+      <div className="grid grid-row-3">
+        <div className="px-4 space-x-3 space-y-2">
+          <label>Deposit:</label>
           <input
-            className="border-2 border-black"
+            className="bg-zinc-200 w-[74%] rounded-lg text-center p-[0.5em] border-none focus:outline-[#888585]"
             type="number"
             value={depositAmount}
             onChange={(e) => setDepositAmount(+e.target.value)}
           />
           <select
-            className="border-2 border-black py-[0.20rem]"
+            className="border-2 px-2 py-1 rounded-lg cursor-default delay-200 bg-zinc-200/50 hover:bg-zinc-400 focus:outline-[#888585]"
             value={currency}
             onChange={(e) => setCurrency(e.target.value)}
           >
@@ -70,7 +70,7 @@ function AccountOperations() {
             <option value="GBP">British Pound</option>
           </select>
           <button
-            className="border-2 border-black px-5"
+            className="border-2 px-2 py-1 rounded-lg cursor-default delay-200 bg-zinc-200/50 hover:bg-zinc-400 focus:outline-[#888585]"
             onClick={handleDeposit}
             disabled={isLoading}
           >
@@ -78,39 +78,39 @@ function AccountOperations() {
           </button>
         </div>
 
-        <div className="py-2 px-1 space-x-4">
-          <label>Withdraw :</label>
+        <div className="flex px-2 space-x-2">
+          <label>Withdraw:</label>
           <input
-            className="border-2 border-black"
+            className="bg-zinc-200 w-[90%] rounded-lg text-center p-[0.5em] border-none focus:outline-[#888585]"
             type="number"
             value={withdrawalAmount}
             onChange={(e) => setWithdrawalAmount(+e.target.value)}
           />
           <button
-            className="border-2 border-black px-4"
+            className="border-2 px-2 py-1 rounded-lg cursor-default delay-200 bg-zinc-200/50 hover:bg-zinc-400 focus:outline-[#888585]"
             onClick={handleWithdrawal}
           >
             Withdraw
           </button>
         </div>
 
-        <div className="px-1 space-x-4">
+        <div className="">
           <label>Request Loan :</label>
           <input
-            className="border-2 border-black"
+            className="bg-zinc-200 w-[90%] rounded-lg text-center p-[0.5em] border-none focus:outline-[#888585]"
             type="number"
             placeholder="Loan Amount"
             value={loanAmount}
             onChange={(e) => setLoanAmount(+e.target.value)}
           />
           <input
-            className="border-2 border-black"
+            className="bg-zinc-200 w-[90%] rounded-lg text-center p-[0.5em] border-none focus:outline-[#888585]"
             placeholder="Loan Purpose"
             value={loanPurpose}
             onChange={(e) => setLoanPurpose(e.target.value)}
           />
           <button
-            className="border-2 border-black mt-4 px-4"
+            className="border-2 px-2 py-1 rounded-lg cursor-default delay-200 bg-zinc-200/50 hover:bg-zinc-400 focus:outline-[#888585]"
             onClick={handleRequestLoan}
           >
             Request Loan
