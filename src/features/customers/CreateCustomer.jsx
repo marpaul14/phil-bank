@@ -15,9 +15,9 @@ function Customer() {
   }
 
   return (
-    <div className="bg-white h-[55%] w-[70%] flex flex-col justify-center items-center rounded-3xl shadow-lg shadow-blue-300/70">
+    <div className="bg-white h-[55%] w-[70%] flex flex-col justify-center items-center rounded-3xl shadow-lg shadow-blue-300/70 pl-5 sm:pl-5">
       <div className="absolute top-60 text-center">
-        <h1 className="text-4xl font-bold border-b border-black hover:text-[#888585] cursor-default hover:border-[#888585] duration-300">
+        <h1 className="text-4xl font-bold text-center border-b border-blue-300/40 shadow-lg hover:text-blue-300/80 cursor-default hover:border-blue-300 duration-500">
           Phil-Bank
         </h1>
       </div>

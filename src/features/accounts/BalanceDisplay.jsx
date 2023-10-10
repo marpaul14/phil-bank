@@ -11,7 +11,7 @@ function BalanceDisplay({ balance }) {
   return (
     <div className="flex justify-center items-center space-x-4">
       <span>Account Balance:</span>
-      <div className="py-1 px-3 my-2 border-black border-2 hover:cursor-default">
+      <div className="py-1 px-3 my-2 rounded-2xl shadow-lg border-2 hover:cursor-default hover:scale-110">
         {formatCurrency(balance)}
       </div>
     </div>
