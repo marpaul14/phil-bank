@@ -21,7 +21,7 @@ function Customer() {
           Phil-Bank
         </h1>
       </div>
-      <h2 className="text-xl font-semibold flex justify-center items-center py-5">
+      <h2 className="text-xl font-semibold flex justify-center items-center py-5 cursor-default">
         Create New Customer
       </h2>
 
